@@ -1,1 +1,0 @@
-print("comanders_test.py to show git commit messages")
