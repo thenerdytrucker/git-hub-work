@@ -1,0 +1,1 @@
+print("Sara is a child, that hates homeless people")
