@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Baskerville:wght@700&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #141414 0%, #000 25%, #333 30%, #666 35%, #999 40%, #ccc 45%, #c2c2c2 50%, #ccc 55%, #999 60%, #666 65%, #333 70%, #000 75%, #141414 100%);
+    cursor: none; /* Hide default cursor */
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 18vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+}
+
+body::before {
+    left: 0;
+    background: 
+        /* Bright star clusters */
+        radial-gradient(circle 2px at 25% 30%, rgba(255, 255, 255, 1) 0%, transparent 50%),
+        radial-gradient(circle 1px at 45% 60%, rgba(255, 255, 255, 0.9) 0%, transparent 40%),
+        radial-gradient(circle 1.5px at 65% 40%, rgba(255, 255, 255, 0.8) 0%, transparent 45%),
+        radial-gradient(circle 1px at 35% 80%, rgba(255, 255, 255, 0.7) 0%, transparent 35%),
+        radial-gradient(circle 2px at 55% 20%, rgba(255, 255, 255, 0.9) 0%, transparent 50%),
+        radial-gradient(circle 1px at 15% 70%, rgba(255, 255, 255, 0.6) 0%, transparent 30%),
+        /* Original milky way gradients */
+        radial-gradient(ellipse 350px 700px at 30% 10%, rgba(255, 245, 200, 0.22) 0%, rgba(255, 220, 150, 0.15) 25%, transparent 50%),
+        radial-gradient(ellipse 280px 450px at 55% 40%, rgba(220, 230, 255, 0.18) 0%, rgba(180, 200, 255, 0.10) 30%, transparent 45%),
+        radial-gradient(ellipse 200px 350px at 40% 75%, rgba(255, 200, 220, 0.15) 0%, rgba(255, 150, 180, 0.08) 25%, transparent 40%),
+        radial-gradient(ellipse 160px 280px at 20% 60%, rgba(200, 180, 255, 0.16) 0%, rgba(160, 140, 255, 0.10) 20%, transparent 35%),
+        radial-gradient(ellipse 190px 250px at 60% 20%, rgba(255, 240, 180, 0.12) 0%, rgba(255, 200, 120, 0.06) 15%, transparent 30%),
+        radial-gradient(ellipse 140px 200px at 15% 35%, rgba(180, 255, 220, 0.10) 0%, rgba(120, 255, 180, 0.05) 20%, transparent 28%),
+        radial-gradient(ellipse 120px 180px at 70% 80%, rgba(255, 180, 255, 0.12) 0%, rgba(220, 140, 255, 0.06) 15%, transparent 25%),
+        radial-gradient(ellipse 100px 160px at 45% 90%, rgba(180, 220, 255, 0.09) 0%, rgba(140, 180, 255, 0.04) 18%, transparent 22%),
+        radial-gradient(ellipse 80px 140px at 75% 50%, rgba(255, 200, 180, 0.08) 0%, rgba(255, 160, 120, 0.04) 20%, transparent 20%),
+        radial-gradient(ellipse 60px 120px at 35% 5%, rgba(200, 255, 200, 0.07) 0%, rgba(150, 255, 150, 0.03) 15%, transparent 18%),
+        radial-gradient(ellipse 50px 100px at 10% 85%, rgba(255, 220, 255, 0.06) 0%, transparent 15%),
+        radial-gradient(ellipse 40px 80px at 65% 65%, rgba(220, 255, 180, 0.05) 0%, transparent 12%),
+        linear-gradient(90deg, #000 0%, #111 15%, #333 25%, #666 35%, #999 40%, #ccc 45%, #fff 50%, #ccc 55%, #999 60%, #666 65%, #333 75%, #111 85%, #000 100%);
+}
+
+body::after {
+    right: 0;
+    background: 
+        /* Bright star clusters */
+        radial-gradient(circle 2px at 75% 30%, rgba(255, 255, 255, 1) 0%, transparent 50%),
+        radial-gradient(circle 1px at 55% 60%, rgba(255, 255, 255, 0.9) 0%, transparent 40%),
+        radial-gradient(circle 1.5px at 35% 40%, rgba(255, 255, 255, 0.8) 0%, transparent 45%),
+        radial-gradient(circle 1px at 65% 80%, rgba(255, 255, 255, 0.7) 0%, transparent 35%),
+        radial-gradient(circle 2px at 45% 20%, rgba(255, 255, 255, 0.9) 0%, transparent 50%),
+        radial-gradient(circle 1px at 85% 70%, rgba(255, 255, 255, 0.6) 0%, transparent 30%),
+        /* Original milky way gradients */
+        radial-gradient(ellipse 350px 700px at 70% 10%, rgba(255, 245, 200, 0.22) 0%, rgba(255, 220, 150, 0.15) 25%, transparent 50%),
+        radial-gradient(ellipse 280px 450px at 45% 40%, rgba(220, 230, 255, 0.18) 0%, rgba(180, 200, 255, 0.10) 30%, transparent 45%),
+        radial-gradient(ellipse 200px 350px at 60% 75%, rgba(255, 200, 220, 0.15) 0%, rgba(255, 150, 180, 0.08) 25%, transparent 40%),
+        radial-gradient(ellipse 160px 280px at 80% 60%, rgba(200, 180, 255, 0.16) 0%, rgba(160, 140, 255, 0.10) 20%, transparent 35%),
+        radial-gradient(ellipse 190px 250px at 40% 20%, rgba(255, 240, 180, 0.12) 0%, rgba(255, 200, 120, 0.06) 15%, transparent 30%),
+        radial-gradient(ellipse 140px 200px at 85% 35%, rgba(180, 255, 220, 0.10) 0%, rgba(120, 255, 180, 0.05) 20%, transparent 28%),
+        radial-gradient(ellipse 120px 180px at 30% 80%, rgba(255, 180, 255, 0.12) 0%, rgba(220, 140, 255, 0.06) 15%, transparent 25%),
+        radial-gradient(ellipse 100px 160px at 55% 90%, rgba(180, 220, 255, 0.09) 0%, rgba(140, 180, 255, 0.04) 18%, transparent 22%),
+        radial-gradient(ellipse 80px 140px at 25% 50%, rgba(255, 200, 180, 0.08) 0%, rgba(255, 160, 120, 0.04) 20%, transparent 20%),
+        radial-gradient(ellipse 60px 120px at 65% 5%, rgba(200, 255, 200, 0.07) 0%, rgba(150, 255, 150, 0.03) 15%, transparent 18%),
+        radial-gradient(ellipse 50px 100px at 90% 85%, rgba(255, 220, 255, 0.06) 0%, transparent 15%),
+        radial-gradient(ellipse 40px 80px at 35% 65%, rgba(220, 255, 180, 0.05) 0%, transparent 12%),
+        linear-gradient(270deg, #000 0%, #111 15%, #333 25%, #666 35%, #999 40%, #ccc 45%, #fff 50%, #ccc 55%, #999 60%, #666 65%, #333 75%, #111 85%, #000 100%);
+}
+
+header {
+    background: linear-gradient(90deg, #000 0%, #880808 50%, #000 100%);
+    color: #fff;
+    padding: 35px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    font-family: 'New Baskerville', serif;
+    font-size: 3.5em;
+    margin: 0;
+    color: #fff;
+    text-shadow:
+        -2px -2px 0 #000,
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+        -2px  0px 0 #000,
+         2px  0px 0 #000,
+         0px -2px 0 #000,
+         0px  2px 0 #000,
+        0 9px 18px rgba(0, 0, 0, 1);
+}
+
+nav ul { 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    justify-content: center; 
+}
+
+nav ul li { 
+    margin: 0 15px; 
+}
+
+nav ul li a { 
+    color: #fff; 
+    text-decoration: none; 
+    text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000,
+        -1px  0px 0 #000,
+         1px  0px 0 #000,
+         0px -1px 0 #000,
+         0px  1px 0 #000,
+        0 6px 12px rgba(0, 0, 0, 0.75);
+    border-bottom: 2px solid #000;
+    padding-bottom: 3px;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    color: #d32f2f;
+    text-decoration: underline;
+}
+
+.hero { 
+    background: #e0e0e0; 
+    padding: 5px 20px 60px 20px; 
+    text-align: center; 
+    position: relative; 
+    z-index: 1; 
+}
+
+section {
+    padding: 5px 20px 40px 20px;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    background: #e0e0e0;
+    color: #111;
+    box-shadow: -8px 8px 18px 0 rgba(0,0,0,0.10), 0 8px 18px 0 rgba(0,0,0,0.10), inset 0 0 20px 5px rgba(0,0,0,0.25), inset 0 0 15px 3px rgba(0,0,0,0.40);
+    border-radius: 10px;
+    margin-bottom: 60px;
+    top: 30px;
+}
+
+/* Bottom line above dots - matches h2 underline height exactly */
+section::after {
+    content: "";
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    right: 20px;
+    border-bottom: 2px solid #d32f2f;
+    border-radius: 0;
+}
+
+h2 { 
+    color: #222; 
+    text-align: center;
+    position: relative;
+    padding: 20px 0;
+}
+
+h2::before,
+h2::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    letter-spacing: 8px;
+}
+
+h2::before {
+    left: 0;
+    content: "•";
+    color: rgba(211, 47, 47, 0.2);
+    text-shadow: 
+        8px 0 0 rgba(211, 47, 47, 0.4),
+        16px 0 0 rgba(211, 47, 47, 0.6),
+        24px 0 0 rgba(211, 47, 47, 0.8),
+        32px 0 0 rgba(211, 47, 47, 1);
+}
+
+h2::after {
+    right: 0;
+    content: "•";
+    color: rgba(211, 47, 47, 0.2);
+    text-shadow: 
+        -8px 0 0 rgba(211, 47, 47, 0.4),
+        -16px 0 0 rgba(211, 47, 47, 0.6),
+        -24px 0 0 rgba(211, 47, 47, 0.8),
+        -32px 0 0 rgba(211, 47, 47, 1);
+}
+
+/* Underline effect */
+h2 {
+    border-bottom: 2px solid #d32f2f;
+    padding-bottom: 10px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 25px;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+
+.skills-list li {
+    background: #000;
+    color: #d32f2f;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid #b71c1c;
+    margin-bottom: 10px;
+}
+
+/* Custom mouse cursor effect */
+body {
+    cursor: none; /* Hide default cursor */
+}
+
+#custom-cursor-mouse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 90px;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.08s cubic-bezier(.4,2,.6,1);
+    /* No background, image will provide the look */
+}
+
+/* Animated stars for black gradient areas */
+.star {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.star.white {
+    background: white;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
+}
+
+.star.red {
+    background: #ffb3b3;
+    box-shadow: 0 0 4px rgba(255, 179, 179, 0.9);
+}
+
+.star.yellow {
+    background: #fff3b3;
+    box-shadow: 0 0 4px rgba(255, 243, 179, 0.9);
+}
+
+.star.purple {
+    background: #d4b3ff;
+    box-shadow: 0 0 4px rgba(212, 179, 255, 0.9);
+}
+
+.star.blue {
+    background: #b3d4ff;
+    box-shadow: 0 0 4px rgba(179, 212, 255, 0.9);
+}
+
+.star.left {
+    left: 0;
+    width: 18vw;
+}
+
+.star.right {
+    right: 0;
+    width: 18vw;
+}
+
+@keyframes starTwinkle {
+    0% { opacity: 0.6; transform: scale(1); }
+    25% { opacity: 0.7; transform: scale(1.02); }
+    50% { opacity: 0.8; transform: scale(1.05); }
+    75% { opacity: 0.7; transform: scale(1.02); }
+    100% { opacity: 0.6; transform: scale(1); }
+}
+
+@keyframes starMoveLeft {
+    0% { transform: translate(0px, 0px); }
+    100% { transform: translate(-150px, 75px); }
+}
+
+@keyframes starMoveRight {
+    0% { transform: translate(0px, 0px); }
+    100% { transform: translate(150px, 75px); }
+}
+
+/* Twinkling animation for bright star clusters */
+@keyframes star-twinkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.95; }
+}
+
+body::before,
+body::after {
+    animation: star-twinkle 8s ease-in-out infinite;
+}
+
+body::after {
+    animation-delay: 4s; /* Offset for variety */
+}
+
+.star-twinkle {
+    animation: starTwinkle 3s ease-in-out infinite;
+}
+
+.star-move-left {
+    animation: starMoveLeft 35s linear infinite;
+}
+
+.star-move-right {
+    animation: starMoveRight 35s linear infinite;
+}
+
+/* Add motion blur/trail effect */
+.star {
+    filter: blur(0.3px);
+    transition: filter 0.3s ease;
+}
+
+.star::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: inherit;
+    box-shadow: inherit;
+    opacity: 0.4;
+    transform: translate(-2px, -1px);
+    pointer-events: none;
+}
+
+.star::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: inherit;
+    box-shadow: inherit;
+    opacity: 0.2;
+    transform: translate(-4px, -2px);
+    pointer-events: none;
+}
+
+/* Additional cosmic nebula effects */
+body {
+    position: relative;
+}
+
+body::before,
+body::after {
+    /* Enhanced with subtle dust cloud effects */
+    box-shadow: 
+        inset 0 0 100px rgba(255, 255, 255, 0.02),
+        inset 0 0 200px rgba(180, 200, 255, 0.01),
+        inset 0 0 300px rgba(255, 180, 255, 0.01);
+}
+
+/* Additional cosmic dust layers */
+.cosmic-dust-left,
+.cosmic-dust-right {
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 18vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.cosmic-dust-left {
+    left: 0;
+    background: 
+        radial-gradient(circle 30px at 20% 15%, rgba(255, 255, 255, 0.8) 0%, transparent 70%),
+        radial-gradient(circle 15px at 70% 25%, rgba(255, 200, 150, 0.6) 0%, transparent 60%),
+        radial-gradient(circle 20px at 40% 45%, rgba(200, 220, 255, 0.7) 0%, transparent 65%),
+        radial-gradient(circle 10px at 10% 70%, rgba(255, 180, 255, 0.5) 0%, transparent 50%),
+        radial-gradient(circle 25px at 80% 80%, rgba(180, 255, 200, 0.6) 0%, transparent 70%),
+        radial-gradient(circle 8px at 60% 60%, rgba(255, 255, 180, 0.4) 0%, transparent 40%);
+}
+
+.cosmic-dust-right {
+    right: 0;
+    background: 
+        radial-gradient(circle 30px at 80% 15%, rgba(255, 255, 255, 0.8) 0%, transparent 70%),
+        radial-gradient(circle 15px at 30% 25%, rgba(255, 200, 150, 0.6) 0%, transparent 60%),
+        radial-gradient(circle 20px at 60% 45%, rgba(200, 220, 255, 0.7) 0%, transparent 65%),
+        radial-gradient(circle 10px at 90% 70%, rgba(255, 180, 255, 0.5) 0%, transparent 50%),
+        radial-gradient(circle 25px at 20% 80%, rgba(180, 255, 200, 0.6) 0%, transparent 70%),
+        radial-gradient(circle 8px at 40% 60%, rgba(255, 255, 180, 0.4) 0%, transparent 40%);
+}
+
+/* Subtle cosmic dust animations */
+@keyframes cosmic-drift {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(2px, -3px) rotate(0.5deg); }
+    50% { transform: translate(-1px, -6px) rotate(1deg); }
+    75% { transform: translate(1px, -9px) rotate(0.5deg); }
+    100% { transform: translate(0, -12px) rotate(0deg); }
+}
+
+.cosmic-dust-left,
+.cosmic-dust-right {
+    animation: cosmic-drift 120s linear infinite;
+}
+
+.cosmic-dust-right {
+    animation-delay: -60s; /* Offset animation for variety */
+}
+
+.skill-item {
+    transition: 
+        box-shadow 0.18s cubic-bezier(.4,2,.6,1),
+        transform 0.18s cubic-bezier(.4,2,.6,1);
+}
+
+.skill-item:hover, .skill-item:focus {
+    box-shadow: 0 0 0 4px #b71c1c, 0 0 16px 4px #b71c1c, 0 0 32px 8px #b71c1c;
+    border-color: #b71c1c;
+    z-index: 2;
+    transform: scale(1.12);
+    position: relative;
+}
+
+.skill-tooltip {
+    position: fixed;
+    background: #222;
+    color: #fff;
+    padding: 18px 28px;
+    border-radius: 10px;
+    font-size: 1.15em;
+    pointer-events: none;
+    z-index: 10000;
+    white-space: pre-line;
+    box-shadow: 0 4px 32px 0 #b71c1c, 0 0 0 4px #b71c1c;
+    opacity: 0;
+    transition: opacity 0.15s;
+    max-width: 340px;
+    border: 2.5px solid #b71c1c;
+}
