@@ -480,17 +480,7 @@ body::after {
     bottom: 0;
 }
 
-/* Skills list override for specific styling */
-.skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px 25px;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-left: 10px;
-    max-width: none;
-    margin: 0;
-}
+
 
 /* Tools section styling */
 .tools-container {
