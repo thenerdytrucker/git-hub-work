@@ -222,7 +222,7 @@ h2 {
 }
 
 .skills-list li {
-     background: linear-gradient(180deg, #888 0%, #555 15%, #333 25%, #000 50%, #333 75%, #555 85%, #888 100%);
+    background: linear-gradient(180deg, #bfbfbf 0%, #6c6c6c 15%, #4d4d4d 25%, #000 50%, #4d4d4d 75%, #6c6c6c 85%, #bfbfbf 100%);
     color: #d32f2f;
     padding: 10px 20px;
     border-radius: 5px;
